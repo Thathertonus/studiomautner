@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Mautner</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    function toggleTheme(){
+      const t=document.documentElement.dataset.theme==="dark"?"":"dark";
+      document.documentElement.dataset.theme=t;
+      localStorage.setItem("theme",t);
+    }
+    window.onload=()=>document.documentElement.dataset.theme=localStorage.getItem("theme")||"";
+  </script>
+</head>
+<body>
+  <button class="theme" onclick="toggleTheme()">☀︎/☾</button>
+  <header>
+    <h1>Studio Mautner</h1>
+    <nav>
+      <a href="/about/">About</a>
+      <a href="/portfolio/">Portfolio</a>
+      <a href="/journal/">Journal</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h2>New Deployment Test</h2>
+    <p>Your site is live through Cloudflare Tunnel!</p>
+    <div class="grid">
+      <div class="card"><h3>Drone Mapping</h3><p>3D terrain models & site scans.</p></div>
+      <div class="card"><h3>Photography</h3><p>Fine-art & commercial work.</p></div>
+      <div class="card"><h3>Installations</h3><p>Interactive light & sound pieces.</p></div>
+    </div>
+  </main>
+  <footer>
+    <p>© 2025 Studio Mautner</p>
+  </footer>
+</body>
+</html>
+
